@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp-combine-media-queries/gulp-combine-media-queries/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp-combine-media-queries/node_modules/gulp-combine-media-queries/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-combine-media-queries">npmtest-gulp-combine-media-queries (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-combine-media-queries/gulp-combine-media-queries/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-combine-media-queries/node_modules/gulp-combine-media-queries/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">4.55% <small>(9 / 198)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-combine-media-queries/gulp-combine-media-queries/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-combine-media-queries/node_modules/gulp-combine-media-queries/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -963,300 +965,300 @@ var path = require('path');
 &nbsp;
 var PLUGIN_NAME = 'gulp-combine-media-queries';
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function(options) {</span>
+module.exports = <span class="fstat-no" title="function not covered" >function(options) {</span>
   'use strict';
 &nbsp;
   // Default options
-<span class="cstat-no" title="statement not covered">  var options = defaults(options || {}, {</span>
+<span class="cstat-no" title="statement not covered" >  var options = defaults(options || {}, {</span>
     log: false,
     ext: false,
     use_external: false
   });
 &nbsp;
   // Log info only when 'options.log' is set to true
-<span class="cstat-no" title="statement not covered">  var log = <span class="fstat-no" title="function not covered">function(message) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (options.log) {</span>
-<span class="cstat-no" title="statement not covered">      gutil.log(message);</span>
+<span class="cstat-no" title="statement not covered" >  var log = <span class="fstat-no" title="function not covered" >function(message) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (options.log) {</span>
+<span class="cstat-no" title="statement not covered" >      gutil.log(message);</span>
     }
   };
 &nbsp;
   // Process Imports
-<span class="cstat-no" title="statement not covered">  var processImport = <span class="fstat-no" title="function not covered">function(cssImport) {</span></span>
-<span class="cstat-no" title="statement not covered">    var strCss = '@import ' + cssImport.import + ';' + '\n\n';</span>
-<span class="cstat-no" title="statement not covered">    return strCss;</span>
+<span class="cstat-no" title="statement not covered" >  var processImport = <span class="fstat-no" title="function not covered" >function(cssImport) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var strCss = '@import ' + cssImport.import + ';' + '\n\n';</span>
+<span class="cstat-no" title="statement not covered" >    return strCss;</span>
   };
 &nbsp;
   // Process comments
-<span class="cstat-no" title="statement not covered">  var processComment = <span class="fstat-no" title="function not covered">function(comment) {</span></span>
-<span class="cstat-no" title="statement not covered">    var strCss = '/*' + comment.comment + '*/';</span>
-<span class="cstat-no" title="statement not covered">    return strCss;</span>
+<span class="cstat-no" title="statement not covered" >  var processComment = <span class="fstat-no" title="function not covered" >function(comment) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var strCss = '/*' + comment.comment + '*/';</span>
+<span class="cstat-no" title="statement not covered" >    return strCss;</span>
   };
 &nbsp;
   // Process declaration
-<span class="cstat-no" title="statement not covered">  var processDeclaration = <span class="fstat-no" title="function not covered">function(declaration) {</span></span>
-<span class="cstat-no" title="statement not covered">    var strCss = declaration.property + ': ' + declaration.value + ';';</span>
-<span class="cstat-no" title="statement not covered">    return strCss;</span>
+<span class="cstat-no" title="statement not covered" >  var processDeclaration = <span class="fstat-no" title="function not covered" >function(declaration) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var strCss = declaration.property + ': ' + declaration.value + ';';</span>
+<span class="cstat-no" title="statement not covered" >    return strCss;</span>
   };
 &nbsp;
   // Check declarations type
-<span class="cstat-no" title="statement not covered">  var commentOrDeclaration = <span class="fstat-no" title="function not covered">function(declarations) {</span></span>
-<span class="cstat-no" title="statement not covered">    var strCss = '';</span>
-<span class="cstat-no" title="statement not covered">    if (declarations.type === 'declaration') {</span>
-<span class="cstat-no" title="statement not covered">      strCss += '\n\t' + processDeclaration(declarations);</span>
-    } else <span class="cstat-no" title="statement not covered">if (declarations.type === 'comment') {</span>
-<span class="cstat-no" title="statement not covered">      strCss += ' ' + processComment(declarations);</span>
+<span class="cstat-no" title="statement not covered" >  var commentOrDeclaration = <span class="fstat-no" title="function not covered" >function(declarations) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var strCss = '';</span>
+<span class="cstat-no" title="statement not covered" >    if (declarations.type === 'declaration') {</span>
+<span class="cstat-no" title="statement not covered" >      strCss += '\n\t' + processDeclaration(declarations);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (declarations.type === 'comment') {</span>
+<span class="cstat-no" title="statement not covered" >      strCss += ' ' + processComment(declarations);</span>
     }
-<span class="cstat-no" title="statement not covered">    return strCss;</span>
+<span class="cstat-no" title="statement not covered" >    return strCss;</span>
   };
 &nbsp;
   // Process normal CSS rule
-<span class="cstat-no" title="statement not covered">  var processRule = <span class="fstat-no" title="function not covered">function(rule) {</span></span>
-<span class="cstat-no" title="statement not covered">    var strCss = '';</span>
-<span class="cstat-no" title="statement not covered">    strCss += rule.selectors.join(',\n') + ' {';</span>
-<span class="cstat-no" title="statement not covered">    rule.declarations.forEach(<span class="fstat-no" title="function not covered">function(rules) {</span></span>
-<span class="cstat-no" title="statement not covered">      strCss += commentOrDeclaration(rules);</span>
+<span class="cstat-no" title="statement not covered" >  var processRule = <span class="fstat-no" title="function not covered" >function(rule) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var strCss = '';</span>
+<span class="cstat-no" title="statement not covered" >    strCss += rule.selectors.join(',\n') + ' {';</span>
+<span class="cstat-no" title="statement not covered" >    rule.declarations.forEach(<span class="fstat-no" title="function not covered" >function(rules) {</span></span>
+<span class="cstat-no" title="statement not covered" >      strCss += commentOrDeclaration(rules);</span>
     });
-<span class="cstat-no" title="statement not covered">    strCss += '\n}\n\n';</span>
-<span class="cstat-no" title="statement not covered">    return strCss;</span>
+<span class="cstat-no" title="statement not covered" >    strCss += '\n}\n\n';</span>
+<span class="cstat-no" title="statement not covered" >    return strCss;</span>
   };
 &nbsp;
   // Check rule type
-<span class="cstat-no" title="statement not covered">  var commentOrRule = <span class="fstat-no" title="function not covered">function(rule) {</span></span>
-<span class="cstat-no" title="statement not covered">    var strCss = '';</span>
-<span class="cstat-no" title="statement not covered">    if (rule.type === 'rule') {</span>
-<span class="cstat-no" title="statement not covered">      strCss += processRule(rule);</span>
-    } else <span class="cstat-no" title="statement not covered">if (rule.type === 'comment') {</span>
-<span class="cstat-no" title="statement not covered">      strCss += processComment(rule) + '\n\n';</span>
+<span class="cstat-no" title="statement not covered" >  var commentOrRule = <span class="fstat-no" title="function not covered" >function(rule) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var strCss = '';</span>
+<span class="cstat-no" title="statement not covered" >    if (rule.type === 'rule') {</span>
+<span class="cstat-no" title="statement not covered" >      strCss += processRule(rule);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (rule.type === 'comment') {</span>
+<span class="cstat-no" title="statement not covered" >      strCss += processComment(rule) + '\n\n';</span>
     }
-<span class="cstat-no" title="statement not covered">    return strCss;</span>
+<span class="cstat-no" title="statement not covered" >    return strCss;</span>
   };
 &nbsp;
   // Check keyframe type
-<span class="cstat-no" title="statement not covered">  var commentOrKeyframe = <span class="fstat-no" title="function not covered">function(frame) {</span></span>
-<span class="cstat-no" title="statement not covered">    var strCss = '';</span>
-<span class="cstat-no" title="statement not covered">    if (frame.type === 'keyframe') {</span>
-<span class="cstat-no" title="statement not covered">      strCss += frame.values.join(',') + ' {';</span>
-<span class="cstat-no" title="statement not covered">      frame.declarations.forEach(<span class="fstat-no" title="function not covered">function(declaration) {</span></span>
-<span class="cstat-no" title="statement not covered">        strCss += commentOrDeclaration(declaration);</span>
+<span class="cstat-no" title="statement not covered" >  var commentOrKeyframe = <span class="fstat-no" title="function not covered" >function(frame) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var strCss = '';</span>
+<span class="cstat-no" title="statement not covered" >    if (frame.type === 'keyframe') {</span>
+<span class="cstat-no" title="statement not covered" >      strCss += frame.values.join(',') + ' {';</span>
+<span class="cstat-no" title="statement not covered" >      frame.declarations.forEach(<span class="fstat-no" title="function not covered" >function(declaration) {</span></span>
+<span class="cstat-no" title="statement not covered" >        strCss += commentOrDeclaration(declaration);</span>
       });
-<span class="cstat-no" title="statement not covered">      strCss += '\n}\n\n';</span>
-    } else <span class="cstat-no" title="statement not covered">if (frame.type === 'comment') {</span>
-<span class="cstat-no" title="statement not covered">      strCss += processComment(frame) + '\n\n';</span>
+<span class="cstat-no" title="statement not covered" >      strCss += '\n}\n\n';</span>
+    } else <span class="cstat-no" title="statement not covered" >if (frame.type === 'comment') {</span>
+<span class="cstat-no" title="statement not covered" >      strCss += processComment(frame) + '\n\n';</span>
     }
-<span class="cstat-no" title="statement not covered">    return strCss;</span>
+<span class="cstat-no" title="statement not covered" >    return strCss;</span>
   };
 &nbsp;
   // Process media queries
-<span class="cstat-no" title="statement not covered">  var processMedia = <span class="fstat-no" title="function not covered">function(media) {</span></span>
-<span class="cstat-no" title="statement not covered">    var strCss = '';</span>
-<span class="cstat-no" title="statement not covered">    strCss += '@media ' + media.rule + ' {\n\n';</span>
-<span class="cstat-no" title="statement not covered">    media.rules.forEach(<span class="fstat-no" title="function not covered">function(rule) {</span></span>
-<span class="cstat-no" title="statement not covered">      strCss += commentOrRule(rule);</span>
+<span class="cstat-no" title="statement not covered" >  var processMedia = <span class="fstat-no" title="function not covered" >function(media) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var strCss = '';</span>
+<span class="cstat-no" title="statement not covered" >    strCss += '@media ' + media.rule + ' {\n\n';</span>
+<span class="cstat-no" title="statement not covered" >    media.rules.forEach(<span class="fstat-no" title="function not covered" >function(rule) {</span></span>
+<span class="cstat-no" title="statement not covered" >      strCss += commentOrRule(rule);</span>
     });
-<span class="cstat-no" title="statement not covered">    strCss += '}\n\n';</span>
-<span class="cstat-no" title="statement not covered">    log('  @media ' + media.rule);</span>
+<span class="cstat-no" title="statement not covered" >    strCss += '}\n\n';</span>
+<span class="cstat-no" title="statement not covered" >    log('  @media ' + media.rule);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    return strCss;</span>
+<span class="cstat-no" title="statement not covered" >    return strCss;</span>
   };
 &nbsp;
   // Process keyframes
-<span class="cstat-no" title="statement not covered">  var processKeyframes = <span class="fstat-no" title="function not covered">function(key) {</span></span>
-<span class="cstat-no" title="statement not covered">    var strCss = '';</span>
-<span class="cstat-no" title="statement not covered">    strCss += '@' + (typeof key.vendor !== 'undefined' ? key.vendor : '') + 'keyframes ' + key.name + ' {\n\n';</span>
-<span class="cstat-no" title="statement not covered">    key.keyframes.forEach(<span class="fstat-no" title="function not covered">function(keyframe) {</span></span>
-<span class="cstat-no" title="statement not covered">      strCss += commentOrKeyframe(keyframe);</span>
+<span class="cstat-no" title="statement not covered" >  var processKeyframes = <span class="fstat-no" title="function not covered" >function(key) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var strCss = '';</span>
+<span class="cstat-no" title="statement not covered" >    strCss += '@' + (typeof key.vendor !== 'undefined' ? key.vendor : '') + 'keyframes ' + key.name + ' {\n\n';</span>
+<span class="cstat-no" title="statement not covered" >    key.keyframes.forEach(<span class="fstat-no" title="function not covered" >function(keyframe) {</span></span>
+<span class="cstat-no" title="statement not covered" >      strCss += commentOrKeyframe(keyframe);</span>
     });
-<span class="cstat-no" title="statement not covered">    strCss += '}\n\n';</span>
+<span class="cstat-no" title="statement not covered" >    strCss += '}\n\n';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    return strCss;</span>
+<span class="cstat-no" title="statement not covered" >    return strCss;</span>
   };
 &nbsp;
-<span class="fstat-no" title="function not covered">  function transform(file, enc, cb) {</span>
+<span class="fstat-no" title="function not covered" >  function transform(file, enc, cb) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (file.isNull()) {</span>
-<span class="cstat-no" title="statement not covered">      this.push(file);</span>
-<span class="cstat-no" title="statement not covered">      return cb();</span>
+<span class="cstat-no" title="statement not covered" >    if (file.isNull()) {</span>
+<span class="cstat-no" title="statement not covered" >      this.push(file);</span>
+<span class="cstat-no" title="statement not covered" >      return cb();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (file.isStream()) {</span>
-<span class="cstat-no" title="statement not covered">      this.emit('error', new PluginError(PLUGIN_NAME, 'Streaming not supported'));</span>
-<span class="cstat-no" title="statement not covered">      return cb();</span>
+<span class="cstat-no" title="statement not covered" >    if (file.isStream()) {</span>
+<span class="cstat-no" title="statement not covered" >      this.emit('error', new PluginError(PLUGIN_NAME, 'Streaming not supported'));</span>
+<span class="cstat-no" title="statement not covered" >      return cb();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var filename = path.relative(file.cwd, file.path);</span>
-<span class="cstat-no" title="statement not covered">    var extFilename = filename.replace('.css', '.responsive.css');</span>
-<span class="cstat-no" title="statement not covered">    var source = file.contents.toString('utf8');</span>
-<span class="cstat-no" title="statement not covered">    var cssJson = parseCss(source);</span>
-<span class="cstat-no" title="statement not covered">    var strStyles = [];</span>
-<span class="cstat-no" title="statement not covered">    var strMediaStyles = [];</span>
-<span class="cstat-no" title="statement not covered">    var processedCSS = {};</span>
+<span class="cstat-no" title="statement not covered" >    var filename = path.relative(file.cwd, file.path);</span>
+<span class="cstat-no" title="statement not covered" >    var extFilename = filename.replace('.css', '.responsive.css');</span>
+<span class="cstat-no" title="statement not covered" >    var source = file.contents.toString('utf8');</span>
+<span class="cstat-no" title="statement not covered" >    var cssJson = parseCss(source);</span>
+<span class="cstat-no" title="statement not covered" >    var strStyles = [];</span>
+<span class="cstat-no" title="statement not covered" >    var strMediaStyles = [];</span>
+<span class="cstat-no" title="statement not covered" >    var processedCSS = {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    log('File ' + filename + ' found.');</span>
+<span class="cstat-no" title="statement not covered" >    log('File ' + filename + ' found.');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    processedCSS.imports = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.base = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.media = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.media.all = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.media.minWidth = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.media.maxWidth = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.media.minHeight = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.media.maxHeight = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.media.print = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.media.blank = [];</span>
-<span class="cstat-no" title="statement not covered">    processedCSS.keyframes = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.imports = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.base = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.all = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.minWidth = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.maxWidth = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.minHeight = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.maxHeight = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.print = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.blank = [];</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.keyframes = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    file.contents = new Buffer(cssJson);</span>
+<span class="cstat-no" title="statement not covered" >    file.contents = new Buffer(cssJson);</span>
 &nbsp;
     // For every rule in the stylesheet...
-<span class="cstat-no" title="statement not covered">    cssJson.stylesheet.rules.forEach(<span class="fstat-no" title="function not covered">function(rule) {</span></span>
+<span class="cstat-no" title="statement not covered" >    cssJson.stylesheet.rules.forEach(<span class="fstat-no" title="function not covered" >function(rule) {</span></span>
 &nbsp;
       // If the rule type is an import
-<span class="cstat-no" title="statement not covered">      if(rule.type === 'import') {</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.imports.push(rule);</span>
+<span class="cstat-no" title="statement not covered" >      if(rule.type === 'import') {</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.imports.push(rule);</span>
       }
 &nbsp;
       // if the rule is a media query...
-<span class="cstat-no" title="statement not covered">      if (rule.type === 'media') {</span>
+<span class="cstat-no" title="statement not covered" >      if (rule.type === 'media') {</span>
 &nbsp;
         // Create 'id' based on the query (stripped from spaces and dashes etc.)
-<span class="cstat-no" title="statement not covered">        var strMedia = rule.media.replace(/[^A-Za-z0-9]/ig, '');</span>
+<span class="cstat-no" title="statement not covered" >        var strMedia = rule.media.replace(/[^A-Za-z0-9]/ig, '');</span>
 &nbsp;
         // Create an array with all the media queries with the same 'id'
-<span class="cstat-no" title="statement not covered">        var item = processedCSS.media.filter(<span class="fstat-no" title="function not covered">function(element) {</span></span>
-<span class="cstat-no" title="statement not covered">          return (element.val === strMedia);</span>
+<span class="cstat-no" title="statement not covered" >        var item = processedCSS.media.filter(<span class="fstat-no" title="function not covered" >function(element) {</span></span>
+<span class="cstat-no" title="statement not covered" >          return (element.val === strMedia);</span>
         });
 &nbsp;
         // If there are no media queries in the array, define details
-<span class="cstat-no" title="statement not covered">        if (item.length &lt; 1) {</span>
-<span class="cstat-no" title="statement not covered">          var mediaObj = {};</span>
-<span class="cstat-no" title="statement not covered">          mediaObj.sortVal = parseFloat(rule.media.match(/\d+/g));</span>
-<span class="cstat-no" title="statement not covered">          mediaObj.rule = rule.media;</span>
-<span class="cstat-no" title="statement not covered">          mediaObj.val = strMedia;</span>
-<span class="cstat-no" title="statement not covered">          mediaObj.rules = [];</span>
+<span class="cstat-no" title="statement not covered" >        if (item.length &lt; 1) {</span>
+<span class="cstat-no" title="statement not covered" >          var mediaObj = {};</span>
+<span class="cstat-no" title="statement not covered" >          mediaObj.sortVal = parseFloat(rule.media.match(/\d+/g));</span>
+<span class="cstat-no" title="statement not covered" >          mediaObj.rule = rule.media;</span>
+<span class="cstat-no" title="statement not covered" >          mediaObj.val = strMedia;</span>
+<span class="cstat-no" title="statement not covered" >          mediaObj.rules = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">          processedCSS.media.push(mediaObj);</span>
+<span class="cstat-no" title="statement not covered" >          processedCSS.media.push(mediaObj);</span>
         }
 &nbsp;
         // Compare the query to other queries
-<span class="cstat-no" title="statement not covered">        var i = 0, matched = false;</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.media.forEach(<span class="fstat-no" title="function not covered">function(elm) {</span></span>
-<span class="cstat-no" title="statement not covered">          if (elm.val === strMedia) {</span>
-<span class="cstat-no" title="statement not covered">            matched = true;</span>
+<span class="cstat-no" title="statement not covered" >        var i = 0, matched = false;</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.media.forEach(<span class="fstat-no" title="function not covered" >function(elm) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (elm.val === strMedia) {</span>
+<span class="cstat-no" title="statement not covered" >            matched = true;</span>
           }
-<span class="cstat-no" title="statement not covered">          if (!matched) {</span>
-<span class="cstat-no" title="statement not covered">            i++;</span>
+<span class="cstat-no" title="statement not covered" >          if (!matched) {</span>
+<span class="cstat-no" title="statement not covered" >            i++;</span>
           }
         });
 &nbsp;
         // Push every merged query
-<span class="cstat-no" title="statement not covered">        rule.rules.forEach(<span class="fstat-no" title="function not covered">function(mediaRule) {</span></span>
-<span class="cstat-no" title="statement not covered">          if (mediaRule.type === 'rule' || 'comment') {</span>
-<span class="cstat-no" title="statement not covered">            processedCSS.media[i].rules.push(mediaRule);</span>
+<span class="cstat-no" title="statement not covered" >        rule.rules.forEach(<span class="fstat-no" title="function not covered" >function(mediaRule) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (mediaRule.type === 'rule' || 'comment') {</span>
+<span class="cstat-no" title="statement not covered" >            processedCSS.media[i].rules.push(mediaRule);</span>
           }
         });
 &nbsp;
-      } else <span class="cstat-no" title="statement not covered">if (rule.type === 'keyframes') {</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.keyframes.push(rule);</span>
+      } else <span class="cstat-no" title="statement not covered" >if (rule.type === 'keyframes') {</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.keyframes.push(rule);</span>
 &nbsp;
-      } else <span class="cstat-no" title="statement not covered">if (rule.type === 'rule' || 'comment') {</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.base.push(rule);</span>
+      } else <span class="cstat-no" title="statement not covered" >if (rule.type === 'rule' || 'comment') {</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.base.push(rule);</span>
       }
     });
 &nbsp;
     // Sort media queries by kind, this is needed to output them in the right order
-<span class="cstat-no" title="statement not covered">    processedCSS.media.forEach(<span class="fstat-no" title="function not covered">function(item) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (item.rule.match(/min-width/)) {</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.media.minWidth.push(item);</span>
-      } else <span class="cstat-no" title="statement not covered">if (item.rule.match(/min-height/)) {</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.media.minHeight.push(item);</span>
-      } else <span class="cstat-no" title="statement not covered">if (item.rule.match(/max-width/)) {</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.media.maxWidth.push(item);</span>
-      } else <span class="cstat-no" title="statement not covered">if (item.rule.match(/max-height/)) {</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.media.maxHeight.push(item);</span>
-      } else <span class="cstat-no" title="statement not covered">if (item.rule.match(/print/)) {</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.media.print.push(item);</span>
-      } else <span class="cstat-no" title="statement not covered">if (item.rule.match(/all/)) {</span>
-<span class="cstat-no" title="statement not covered">        processedCSS.media.all.push(item);</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.forEach(<span class="fstat-no" title="function not covered" >function(item) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (item.rule.match(/min-width/)) {</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.media.minWidth.push(item);</span>
+      } else <span class="cstat-no" title="statement not covered" >if (item.rule.match(/min-height/)) {</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.media.minHeight.push(item);</span>
+      } else <span class="cstat-no" title="statement not covered" >if (item.rule.match(/max-width/)) {</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.media.maxWidth.push(item);</span>
+      } else <span class="cstat-no" title="statement not covered" >if (item.rule.match(/max-height/)) {</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.media.maxHeight.push(item);</span>
+      } else <span class="cstat-no" title="statement not covered" >if (item.rule.match(/print/)) {</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.media.print.push(item);</span>
+      } else <span class="cstat-no" title="statement not covered" >if (item.rule.match(/all/)) {</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.media.all.push(item);</span>
       } else {
-<span class="cstat-no" title="statement not covered">        processedCSS.media.blank.push(item);</span>
+<span class="cstat-no" title="statement not covered" >        processedCSS.media.blank.push(item);</span>
       }
     });
 &nbsp;
     // Function to determine sort order
-<span class="cstat-no" title="statement not covered">    var determineSortOrder = <span class="fstat-no" title="function not covered">function(a, b, isMax) {</span></span>
-<span class="cstat-no" title="statement not covered">      var sortValA = a.sortVal,</span>
+<span class="cstat-no" title="statement not covered" >    var determineSortOrder = <span class="fstat-no" title="function not covered" >function(a, b, isMax) {</span></span>
+<span class="cstat-no" title="statement not covered" >      var sortValA = a.sortVal,</span>
               sortValB = b.sortVal;
-<span class="cstat-no" title="statement not covered">      isMax = typeof isMax !== 'undefined' ? isMax : false;</span>
+<span class="cstat-no" title="statement not covered" >      isMax = typeof isMax !== 'undefined' ? isMax : false;</span>
 &nbsp;
       // consider print for sorting if sortVals are equal
-<span class="cstat-no" title="statement not covered">      if (sortValA === sortValB) {</span>
-<span class="cstat-no" title="statement not covered">        if (a.rule.match(/print/)) {</span>
+<span class="cstat-no" title="statement not covered" >      if (sortValA === sortValB) {</span>
+<span class="cstat-no" title="statement not covered" >        if (a.rule.match(/print/)) {</span>
           // a contains print and should be sorted after b
-<span class="cstat-no" title="statement not covered">          return 1;</span>
+<span class="cstat-no" title="statement not covered" >          return 1;</span>
         }
-<span class="cstat-no" title="statement not covered">        if (b.rule.match(/print/)) {</span>
+<span class="cstat-no" title="statement not covered" >        if (b.rule.match(/print/)) {</span>
           // b contains print and should be sorted after a
-<span class="cstat-no" title="statement not covered">          return -1;</span>
+<span class="cstat-no" title="statement not covered" >          return -1;</span>
         }
       }
 &nbsp;
       // return descending sort order for max-(width|height) media queries
-<span class="cstat-no" title="statement not covered">      if (isMax) {</span>
-<span class="cstat-no" title="statement not covered">        return sortValB - sortValA;</span>
+<span class="cstat-no" title="statement not covered" >      if (isMax) {</span>
+<span class="cstat-no" title="statement not covered" >        return sortValB - sortValA;</span>
       }
 &nbsp;
       // return ascending sort order
-<span class="cstat-no" title="statement not covered">      return sortValA - sortValB;</span>
+<span class="cstat-no" title="statement not covered" >      return sortValA - sortValB;</span>
     };
 &nbsp;
     // Sort media.all queries ascending
-<span class="cstat-no" title="statement not covered">    processedCSS.media.all.sort(<span class="fstat-no" title="function not covered">function(a, b) {</span></span>
-<span class="cstat-no" title="statement not covered">      return determineSortOrder(a, b);</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.all.sort(<span class="fstat-no" title="function not covered" >function(a, b) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return determineSortOrder(a, b);</span>
     });
 &nbsp;
     // Sort media.minWidth queries ascending
-<span class="cstat-no" title="statement not covered">    processedCSS.media.minWidth.sort(<span class="fstat-no" title="function not covered">function(a, b) {</span></span>
-<span class="cstat-no" title="statement not covered">      return determineSortOrder(a, b);</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.minWidth.sort(<span class="fstat-no" title="function not covered" >function(a, b) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return determineSortOrder(a, b);</span>
     });
 &nbsp;
     // Sort media.minHeight queries ascending
-<span class="cstat-no" title="statement not covered">    processedCSS.media.minHeight.sort(<span class="fstat-no" title="function not covered">function(a, b) {</span></span>
-<span class="cstat-no" title="statement not covered">      return determineSortOrder(a, b);</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.minHeight.sort(<span class="fstat-no" title="function not covered" >function(a, b) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return determineSortOrder(a, b);</span>
     });
 &nbsp;
     // Sort media.maxWidth queries descending
-<span class="cstat-no" title="statement not covered">    processedCSS.media.maxWidth.sort(<span class="fstat-no" title="function not covered">function(a, b) {</span></span>
-<span class="cstat-no" title="statement not covered">      return determineSortOrder(a, b, true);</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.maxWidth.sort(<span class="fstat-no" title="function not covered" >function(a, b) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return determineSortOrder(a, b, true);</span>
     });
 &nbsp;
     // Sort media.maxHeight queries descending
-<span class="cstat-no" title="statement not covered">    processedCSS.media.maxHeight.sort(<span class="fstat-no" title="function not covered">function(a, b) {</span></span>
-<span class="cstat-no" title="statement not covered">      return determineSortOrder(a, b, true);</span>
+<span class="cstat-no" title="statement not covered" >    processedCSS.media.maxHeight.sort(<span class="fstat-no" title="function not covered" >function(a, b) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return determineSortOrder(a, b, true);</span>
     });
 &nbsp;
     // Function to output CSS Imports
-<span class="cstat-no" title="statement not covered">    var outputImports = <span class="fstat-no" title="function not covered">function(base){</span></span>
-<span class="cstat-no" title="statement not covered">      base.forEach(<span class="fstat-no" title="function not covered">function (rule) {</span></span>
-<span class="cstat-no" title="statement not covered">        strStyles += processImport(rule);</span>
+<span class="cstat-no" title="statement not covered" >    var outputImports = <span class="fstat-no" title="function not covered" >function(base){</span></span>
+<span class="cstat-no" title="statement not covered" >      base.forEach(<span class="fstat-no" title="function not covered" >function (rule) {</span></span>
+<span class="cstat-no" title="statement not covered" >        strStyles += processImport(rule);</span>
       });
     };
 &nbsp;
     // Function to output base CSS
-<span class="cstat-no" title="statement not covered">    var outputBase = <span class="fstat-no" title="function not covered">function(base) {</span></span>
-<span class="cstat-no" title="statement not covered">      base.forEach(<span class="fstat-no" title="function not covered">function(rule) {</span></span>
-<span class="cstat-no" title="statement not covered">        strStyles += commentOrRule(rule);</span>
+<span class="cstat-no" title="statement not covered" >    var outputBase = <span class="fstat-no" title="function not covered" >function(base) {</span></span>
+<span class="cstat-no" title="statement not covered" >      base.forEach(<span class="fstat-no" title="function not covered" >function(rule) {</span></span>
+<span class="cstat-no" title="statement not covered" >        strStyles += commentOrRule(rule);</span>
       });
     };
 &nbsp;
     // Function to output media queries
-<span class="cstat-no" title="statement not covered">    var outputMedia = <span class="fstat-no" title="function not covered">function(media) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (options.use_external) {</span>
-<span class="cstat-no" title="statement not covered">        media.forEach(<span class="fstat-no" title="function not covered">function(item) {</span></span>
-<span class="cstat-no" title="statement not covered">          strMediaStyles += processMedia(item);</span>
+<span class="cstat-no" title="statement not covered" >    var outputMedia = <span class="fstat-no" title="function not covered" >function(media) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (options.use_external) {</span>
+<span class="cstat-no" title="statement not covered" >        media.forEach(<span class="fstat-no" title="function not covered" >function(item) {</span></span>
+<span class="cstat-no" title="statement not covered" >          strMediaStyles += processMedia(item);</span>
         });
       } else {
-<span class="cstat-no" title="statement not covered">        media.forEach(<span class="fstat-no" title="function not covered">function(item) {</span></span>
-<span class="cstat-no" title="statement not covered">          strStyles += processMedia(item);</span>
+<span class="cstat-no" title="statement not covered" >        media.forEach(<span class="fstat-no" title="function not covered" >function(item) {</span></span>
+<span class="cstat-no" title="statement not covered" >          strStyles += processMedia(item);</span>
         });
       }
 &nbsp;
@@ -1264,73 +1266,72 @@ module.exports = <span class="fstat-no" title="function not covered">function(op
     ;
 &nbsp;
     // Function to output keyframes
-<span class="cstat-no" title="statement not covered">    var outputKeyFrames = <span class="fstat-no" title="function not covered">function(keyframes) {</span></span>
-<span class="cstat-no" title="statement not covered">      keyframes.forEach(<span class="fstat-no" title="function not covered">function(keyframe) {</span></span>
-<span class="cstat-no" title="statement not covered">        strStyles += processKeyframes(keyframe);</span>
+<span class="cstat-no" title="statement not covered" >    var outputKeyFrames = <span class="fstat-no" title="function not covered" >function(keyframes) {</span></span>
+<span class="cstat-no" title="statement not covered" >      keyframes.forEach(<span class="fstat-no" title="function not covered" >function(keyframe) {</span></span>
+<span class="cstat-no" title="statement not covered" >        strStyles += processKeyframes(keyframe);</span>
       });
     };
 &nbsp;
     // Check if the imports CSS was processed and print them
-<span class="cstat-no" title="statement not covered">    if (processedCSS.imports.length !== 0){</span>
-<span class="cstat-no" title="statement not covered">      outputImports(processedCSS.imports);</span>
+<span class="cstat-no" title="statement not covered" >    if (processedCSS.imports.length !== 0){</span>
+<span class="cstat-no" title="statement not covered" >      outputImports(processedCSS.imports);</span>
     }
 &nbsp;
     // Check if base CSS was processed and print them
-<span class="cstat-no" title="statement not covered">    if (processedCSS.base.length !== 0) {</span>
-<span class="cstat-no" title="statement not covered">      outputBase(processedCSS.base);</span>
+<span class="cstat-no" title="statement not covered" >    if (processedCSS.base.length !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >      outputBase(processedCSS.base);</span>
     }
 &nbsp;
     // Check if media queries were processed and print them in order
-<span class="cstat-no" title="statement not covered">    if (processedCSS.media.length !== 0) {</span>
-<span class="cstat-no" title="statement not covered">      log('Processed media queries:');</span>
-<span class="cstat-no" title="statement not covered">      outputMedia(processedCSS.media.blank);</span>
-<span class="cstat-no" title="statement not covered">      outputMedia(processedCSS.media.all);</span>
-<span class="cstat-no" title="statement not covered">      outputMedia(processedCSS.media.minWidth);</span>
-<span class="cstat-no" title="statement not covered">      outputMedia(processedCSS.media.minHeight);</span>
-<span class="cstat-no" title="statement not covered">      outputMedia(processedCSS.media.maxWidth);</span>
-<span class="cstat-no" title="statement not covered">      outputMedia(processedCSS.media.maxHeight);</span>
-<span class="cstat-no" title="statement not covered">      outputMedia(processedCSS.media.print);</span>
+<span class="cstat-no" title="statement not covered" >    if (processedCSS.media.length !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >      log('Processed media queries:');</span>
+<span class="cstat-no" title="statement not covered" >      outputMedia(processedCSS.media.blank);</span>
+<span class="cstat-no" title="statement not covered" >      outputMedia(processedCSS.media.all);</span>
+<span class="cstat-no" title="statement not covered" >      outputMedia(processedCSS.media.minWidth);</span>
+<span class="cstat-no" title="statement not covered" >      outputMedia(processedCSS.media.minHeight);</span>
+<span class="cstat-no" title="statement not covered" >      outputMedia(processedCSS.media.maxWidth);</span>
+<span class="cstat-no" title="statement not covered" >      outputMedia(processedCSS.media.maxHeight);</span>
+<span class="cstat-no" title="statement not covered" >      outputMedia(processedCSS.media.print);</span>
     }
 &nbsp;
     // Check if keyframes were processed and print them
-<span class="cstat-no" title="statement not covered">    if (processedCSS.keyframes.length !== 0) {</span>
-<span class="cstat-no" title="statement not covered">      outputKeyFrames(processedCSS.keyframes);</span>
+<span class="cstat-no" title="statement not covered" >    if (processedCSS.keyframes.length !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >      outputKeyFrames(processedCSS.keyframes);</span>
     }
 &nbsp;
     // Define the new file extension
-<span class="cstat-no" title="statement not covered">    if (options.ext) {</span>
-<span class="cstat-no" title="statement not covered">      file.path = gutil.replaceExtension(file.path, options.ext);</span>
+<span class="cstat-no" title="statement not covered" >    if (options.ext) {</span>
+<span class="cstat-no" title="statement not covered" >      file.path = gutil.replaceExtension(file.path, options.ext);</span>
     }
 &nbsp;
     // Write the new file
-<span class="cstat-no" title="statement not covered">    file.contents = new Buffer(strStyles);</span>
-<span class="cstat-no" title="statement not covered">    log(gutil.colors.cyan('File ' + filename + ' created.'));</span>
+<span class="cstat-no" title="statement not covered" >    file.contents = new Buffer(strStyles);</span>
+<span class="cstat-no" title="statement not covered" >    log(gutil.colors.cyan('File ' + filename + ' created.'));</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (options.use_external &amp;&amp; processedCSS.media.length !== 0) {</span>
-<span class="cstat-no" title="statement not covered">      var f = new gutil.File({</span>
+<span class="cstat-no" title="statement not covered" >    if (options.use_external &amp;&amp; processedCSS.media.length !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >      var f = new gutil.File({</span>
         base: file.base,
         path: extFilename,
         contents: new Buffer(strMediaStyles)
       });
-<span class="cstat-no" title="statement not covered">      log(gutil.colors.cyan('File ' + extFilename + ' created.'));</span>
+<span class="cstat-no" title="statement not covered" >      log(gutil.colors.cyan('File ' + extFilename + ' created.'));</span>
     }
-<span class="cstat-no" title="statement not covered">    this.push(file);</span>
-<span class="cstat-no" title="statement not covered">    if (options.use_external &amp;&amp; processedCSS.media.length !== 0) {</span>
-<span class="cstat-no" title="statement not covered">      this.push(f);</span>
+<span class="cstat-no" title="statement not covered" >    this.push(file);</span>
+<span class="cstat-no" title="statement not covered" >    if (options.use_external &amp;&amp; processedCSS.media.length !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >      this.push(f);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    cb();</span>
+<span class="cstat-no" title="statement not covered" >    cb();</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return through.obj(transform);</span>
+<span class="cstat-no" title="statement not covered" >  return through.obj(transform);</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 20:42:36 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 16:37:11 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
